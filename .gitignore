@@ -1,0 +1,38 @@
+# ==========================
+# ASP.NET Core / Backend
+# ==========================
+bin/
+obj/
+*.user
+*.suo
+*.vs/
+*.log
+*.env
+.vscode/
+
+# Rider IDE
+.idea/
+
+# ==========================
+# Vue 3 / Frontend
+# ==========================
+node_modules/
+dist/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env.local
+.env.*.local
+
+# ==========================
+# Docker
+# ==========================
+docker-compose.override.yml
+*.dockerfile
+*.log
+
+# ==========================
+# System files
+# ==========================
+.DS_Store
+Thumbs.db
