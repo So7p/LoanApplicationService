@@ -12,6 +12,12 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - loanapp-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      retries: 5
 
   backend:
     build:
@@ -21,10 +27,13 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=postgres;Database=loanappdb;Username=postgres;Password=postgres
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=loanappdb;Username=postgres;Password=postgres
+    networks:
+      - loanapp-net
 
   frontend:
     build:
@@ -35,6 +44,12 @@ services:
       - "5173:80"
     depends_on:
       - backend
+    networks:
+      - loanapp-net
 
 volumes:
   postgres_data:
+
+networks: 
+  loanapp-net:
+    driver: bridge

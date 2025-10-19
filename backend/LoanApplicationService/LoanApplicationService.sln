@@ -1,14 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36121.58 d17.14
+VisualStudioVersion = 17.14.36121.58
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplicationService", "LoanApplicationService\LoanApplicationService.csproj", "{BB939D5A-6594-4E1F-A7DA-1A8EDDC78CDF}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
 	ProjectSection(SolutionItems) = preProject
 		Dockerfile = Dockerfile
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplicationService.Domain", "LoanApplicationService.Domain\LoanApplicationService.Domain.csproj", "{F8F984E0-8433-4119-AC51-D65187F469AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplicationService.Infrastructure", "LoanApplicationService.Infrastructure\LoanApplicationService.Infrastructure.csproj", "{700F9099-8EF5-4FE0-9386-663B7A716EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoanApplicationService.WebApi", "LoanApplicationService.WebApi\LoanApplicationService.WebApi.csproj", "{94DC2855-45D9-D4B5-8327-0D8D38AF7BF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB939D5A-6594-4E1F-A7DA-1A8EDDC78CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB939D5A-6594-4E1F-A7DA-1A8EDDC78CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB939D5A-6594-4E1F-A7DA-1A8EDDC78CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB939D5A-6594-4E1F-A7DA-1A8EDDC78CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8F984E0-8433-4119-AC51-D65187F469AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8F984E0-8433-4119-AC51-D65187F469AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8F984E0-8433-4119-AC51-D65187F469AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8F984E0-8433-4119-AC51-D65187F469AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700F9099-8EF5-4FE0-9386-663B7A716EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700F9099-8EF5-4FE0-9386-663B7A716EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700F9099-8EF5-4FE0-9386-663B7A716EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700F9099-8EF5-4FE0-9386-663B7A716EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DC2855-45D9-D4B5-8327-0D8D38AF7BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC2855-45D9-D4B5-8327-0D8D38AF7BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC2855-45D9-D4B5-8327-0D8D38AF7BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC2855-45D9-D4B5-8327-0D8D38AF7BF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
