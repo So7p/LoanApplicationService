@@ -1,4 +1,5 @@
 using LoanApplicationService.Infrastructure.Persistence;
+using LoanApplicationService.WebApi;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,10 +9,16 @@ builder.Services.AddDbContext<LoanAppContext>(options =>
 
 // Add services to the container.
 
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(s =>
+{
+    s.CustomSchemaIds(type => type.FullName);
+});
 
 var app = builder.Build();
 
