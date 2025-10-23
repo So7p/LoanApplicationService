@@ -5,9 +5,9 @@ namespace LoanApplicationService.Domain.POCOs.Enums
     public enum LoanStatusEnum : byte
     {
         [Description("Опубликована")]
-        Published = 1,
+        Published = 0,
 
         [Description("Снята с публикации")]
-        Unpublished = 2,
+        Unpublished = 1,
     }
 }
